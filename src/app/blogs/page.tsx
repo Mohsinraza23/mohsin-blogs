@@ -58,7 +58,7 @@ const page = () => {
             {/* Blog Post 2 */}
             <div className="bg-white rounded overflow-hidden group">
               <Image
-                src="/agentic.png"
+                src="/Agentic.png"
                 alt="Blog Post 2"
                 width={500}
                 height={300}
