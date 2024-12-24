@@ -3,57 +3,7 @@
 import { useRouter } from "next/navigation";
 import React from "react";
 import Image from "next/image";
-
-const blogPosts = [
-  {
-    id: 1,
-    title: "What is Ai ?",
-    content:
-      "Artificial Intelligence (AI) is a transformative technology that mimics human intelligence to perform tasks such as learning, problem-solving, and decision-making. It leverages algorithms and vast datasets to identify patterns, make predictions, and automate processes....",
-    date: "25 December 2024",
-    image: "/ai.png",
-  },
-  {
-    id: 2,
-    title: "What is Agentic Ai ?",
-    content:
-      "Agentic AI refers to artificial intelligence systems designed to act as autonomous agents, capable of making decisions, taking actions, and achieving goals independently. These systems possess a high level of adaptability and can interact dynamically with their environment....",
-    date: "25 December 2024",
-    image: "/Agentic.png",
-  },
-  {
-    id: 3,
-    title: "What is Next.js 15 ?",
-    content:
-      "Next.js is a popular open-source React framework that simplifies the development of modern web applications. Built on top of React, it provides powerful features like server-side rendering (SSR), static site generation (SSG), and dynamic routing, making it ideal for building high-performance websites and applications....",
-    date: "25 December 2024",
-    image: "/next.png",
-  },
-  {
-    id: 4,
-    title: "Why Learn Python ?",
-    content:
-      "Python is a high-level, versatile programming language known for its simplicity and readability. Created by Guido van Rossum in 1991, it has become one of the most popular programming languages in the world. Python's clean syntax makes it beginner-friendly, yet powerful enough for advanced programming tasks...",
-    date: "25 December 2024",
-    image: "/python.png",
-  },
-  {
-    id: 5,
-    title: "What Are LLMs ?",
-    content:
-      "Large Language Models (LLMs) are advanced AI systems trained on vast amounts of text data to understand, generate, and manipulate human language. These models, such as OpenAI's GPT series, are built using deep learning techniques, particularly transformers, which enable them to process and generate coherent and contextually relevant text....",
-    date: "25 December 2024",
-    image: "/llms.png",
-  },
-  {
-    id: 6,
-    title: "Machine Learning is Fun..",
-    content:
-      "Machine Learning (ML) is one of the most exciting fields in technology, enabling computers to learn from data and make decisions without being explicitly programmed. It’s like teaching a computer to think, analyze, and predict, making it a thrilling journey for tech enthusiasts. From recommending your favorite songs to recognizing faces in photos, ML powers countless aspects of our daily lives...",
-    date: "25 December 2024",
-    image: "https://readymadeui.com/team-image.webp",
-  },
-];
+import { blogPosts } from "../../../data/blogPosts"; // Import data
 
 const Card = () => {
   const router = useRouter();
@@ -78,20 +28,16 @@ const Card = () => {
                 <Image
                   src={post.image}
                   alt={post.title}
-                  width={400} // Adjust as needed
-                  height={200} // Adjust as needed
+                  width={400}
+                  height={200}
                   className="w-full h-52 object-cover transform group-hover:scale-105 transition-transform duration-500 ease-in-out"
                 />
               </div>
               <div className="p-6">
-                <h3
-                  className="text-lg font-bold text-gray-800 mb-3 hover:text-orange-500 hover:underline transition-colors duration-200"
-                >
+                <h3 className="text-lg font-bold text-gray-800 mb-3 hover:text-orange-500 hover:underline transition-colors duration-200">
                   {post.title}
                 </h3>
-                <p
-                  className="text-gray-500 text-sm hover:text-orange-500 hover:underline transition-colors duration-200"
-                >
+                <p className="text-gray-500 text-sm hover:text-orange-500 hover:underline transition-colors duration-200">
                   {post.content}
                 </p>
                 <p className="text-orange-500 text-[13px] font-semibold mt-4">
@@ -113,6 +59,7 @@ const Card = () => {
 };
 
 export default Card;
+
 
 
 
