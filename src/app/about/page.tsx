@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const AboutPage = () => {
   return (
-    <div className="bg-slate-300 min-h-screen flex items-center justify-center">
+    <div className="bg-slate-100 min-h-screen flex items-center justify-center">
       <div className="bg-white sm:p-8 p-4 shadow-[0_4px_12px_-5px_rgba(0,0,0,0.4)] w-full max-w-xl rounded-lg font-[sans-serif] overflow-hidden mx-auto mt-4">
         {/* Profile Section */}
         <div className="flex flex-col sm:flex-row items-center">
